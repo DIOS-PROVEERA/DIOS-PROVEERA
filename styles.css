@@ -1,0 +1,252 @@
+/* ==================== CONFIGURACIÓN GENERAL ==================== */
+body {
+  margin: 0;                     /* Elimina el margen externo que por defecto añade el navegador alrededor del body */
+  padding: 0;                    /* Elimina el relleno interno por defecto que podría tener el body */
+  background-color: #F0F8FF;       /* Define un fondo blanco para toda la página */
+  font-family: 'Poppins', sans-serif; /* Establece la fuente principal a "Poppins"; si no está disponible, usa cualquier fuente sans-serif */
+}
+
+/* ==================== BARRA SUPERIOR DE CONTACTO ==================== */
+.contact-bar {
+  background-color: #012c5f;    /* Fondo azul oscuro específico con código hexadecimal */
+  color: white;                 /* Color del texto en blanco para contraste */
+  padding: 15px 50px;           /* Espacio interno: 15px arriba y abajo, 50px a los lados */
+  font-size: 18px;              /* Tamaño de letra relativamente grande para mejor visibilidad */
+  font-weight: bold;            /* Texto en negrita para enfatizar */
+  display: flex;                /* Usa flexbox para organizar elementos hijos en fila por defecto */
+  flex-wrap: wrap;              /* Permite que los elementos hijos se muevan a una nueva línea si no caben en una sola fila */
+  justify-content: space-between; /* Distribuye los elementos con espacio máximo entre ellos */
+  align-items: center;          /* Centra verticalmente los elementos dentro de la barra */
+}
+
+/* ==================== CONTENEDOR PRINCIPAL ==================== */
+.main-container {
+  display: flex;                /* Organiza sus hijos con flexbox */
+  flex-wrap: wrap;              /* Permite que los hijos pasen a una nueva línea si es necesario */
+  background: linear-gradient(135deg, hsl(175, 100%, 60%), #004c99); /* Fondo con degradado diagonal desde un verde azulado a azul oscuro */
+  justify-content: center;      /* Centra horizontalmente los hijos dentro del contenedor */
+  align-items: center;          /* Centra verticalmente los hijos */
+  gap: 200px;                   /* Espacio fijo de 200px entre los elementos hijos (imagen principal y logos secundarios) */
+  margin-top: 40px;             /* Espacio de 40px arriba del contenedor para separarlo de otros elementos */
+  padding: 20px;                /* Relleno interno de 20px en todos los lados */
+}
+
+.logo-container img {
+  width: 100%;                 /* La imagen ocupará todo el ancho disponible del contenedor padre */
+  max-width: 800px;            /* Pero como máximo será 400px para evitar que se haga muy grande */
+  height: auto;                /* La altura se ajusta proporcionalmente para mantener la proporción de la imagen */
+}
+
+.sub-logo-container {
+  display: flex;               /* Flexbox para los logos secundarios */
+  flex-direction: column;      /* Apila los logos en columna vertical */
+  align-items: center;         /* Centra horizontalmente los logos dentro del contenedor */
+}
+
+.sub-logo {
+  margin-bottom: 10px;         /* Espacio debajo de cada sub-logo para separarlos */
+  transition: transform 0.3s ease-in-out; /* Animación suave cuando se aplica la transformación al hacer hover */
+}
+
+.sub-logo:hover {
+  transform: scale(1.1);       /* Al poner el cursor encima, la imagen escala un 10% más grande */
+}
+
+.sub-logo img {
+  width: 170px;                /* Ancho fijo de 170px para cada sub-logo */
+  height: auto;                /* Altura ajustada para mantener proporción */
+  border-radius: 10px;         /* Bordes redondeados con radio de 10px para suavizar esquinas */
+}
+
+/* ==================== BANNER PRINCIPAL ==================== */
+.banner {
+  display: flex;               /* Flexbox para organizar el banner y sus contenidos */
+  flex-wrap: wrap;             /* Permite que los hijos se muevan a otra línea si no caben */
+  align-items: center;         /* Centra verticalmente los hijos */
+  justify-content: center;     /* Centra horizontalmente los hijos */
+  text-align: center;          /* Centra el texto dentro de cada elemento hijo */
+  gap: 50px;                   /* Espacio de 50px entre cada hijo dentro del banner */
+  padding: 50px 10px;          /* Relleno de 50px arriba y abajo, 10px a los lados */
+}
+
+.text-container {
+  max-width: 600px;            /* Máximo ancho de 600px para que el texto no sea demasiado ancho y se lea mejor */
+  background: linear-gradient(135deg, #0044AA, #001F60); /* Fondo con degradado azul de tono medio a oscuro */
+  padding: 20px;               /* Relleno interno para que el texto no pegue con los bordes */
+  border-radius: 0 50px 50px 0; /* Bordes redondeados solo en las esquinas superiores e inferiores derechas */
+  color: white;                /* Texto en blanco para buen contraste con fondo oscuro */
+  text-align: left;            /* Texto alineado a la izquierda */
+  flex: 1 1 300px;             /* Flex-grow: 1 (crece si hay espacio), flex-shrink: 1 (se encoge si es necesario), flex-basis: 300px (tamaño base preferido) */
+}
+
+.text-container h1 {
+  font-size: 35px;             /* Tamaño grande para el título */
+  font-weight: bold;           /* Texto en negrita */
+  margin: 0;                   /* Elimina margenes externos para evitar espacios inesperados */
+}
+
+#dynamic-image {
+  width: 100%;                 /* Imagen ocupa todo el ancho del contenedor padre */
+  max-width: 600px;            /* Máximo ancho de 600px para no crecer mucho en pantallas grandes */
+  height: auto;                /* Altura proporcional para no deformar la imagen */
+  border-radius: 15px;         /* Bordes redondeados para suavizar la imagen */
+  transition: opacity 0.5s ease-in-out; /* Animación suave cuando cambia la opacidad (útil para efectos visuales) */
+}
+
+/* ==================== SECCIÓN EXPERIENCIA DONDE ESTA CONOCENOS ==================== */
+.experience-section {
+  background: linear-gradient(135deg, hsl(175, 100%, 60%), #004c99); /* Fondo degradado verde azulado a azul */
+  display: flex;               /* Flexbox para organizar los contenidos */
+  flex-wrap: wrap;             /* Permite que se muevan a nueva línea */
+  align-items: center;         /* Centra verticalmente los hijos */
+  justify-content: center;     /* Centra horizontalmente */
+  padding: 30px 20px;          /* Relleno arriba/abajo 30px, lados 20px */
+  gap: 10px;                   /* Espacio de 10px entre elementos hijos */
+  margin-bottom: 40px;         /* Espacio extra debajo para separar de la siguiente sección */
+}
+
+.experience-logo {
+  width: 400px;                /* Ancho fijo para el logo de experiencia */
+  height: auto;                /* Altura proporcional */
+  margin-right: 200px;         /* Espacio a la derecha para separar del texto */
+}
+
+.experience-text {
+  max-width: 400px;            /* Máximo ancho para que el texto no sea demasiado ancho */
+  text-align: center;          /* Centra el texto dentro del contenedor */
+}
+
+.experience-text h2 {
+  font-size: 28px;             /* Tamaño de fuente grande para el título */
+  font-weight: bold;           /* Negrita para destacar */
+  color: #004a98;              /* Color azul oscuro */
+}
+
+.experience-text p {
+  font-size: 16px;             /* Tamaño de letra estándar para párrafos */
+  color: #333;                 /* Gris oscuro para buena legibilidad */
+}
+
+.experience-button {
+  display: inline-block;       /* Se comporta como texto en línea pero acepta padding y margin */
+  background-color: #004a98;   /* Fondo azul oscuro */
+  color: white;                /* Texto blanco */
+  padding: 10px 20px;          /* Espacio interno alrededor del texto */
+  text-decoration: none;       /* Quita subrayado si es un enlace */
+  font-weight: bold;           /* Texto en negrita */
+  border-radius: 5px;          /* Bordes ligeramente redondeados */
+  transition: background 0.3s; /* Transición suave al cambiar el fondo */
+}
+
+.experience-button:hover {
+  background-color: #003377;   /* Cambia a azul más oscuro al pasar mouse para indicar interactividad */
+}
+
+/* ==================== PIE DE PÁGINA ==================== */
+.footer {
+  background-color: #012c5f;   /* Fondo azul oscuro */
+  color: white;                /* Texto en blanco */
+  padding: 40px 20px;          /* Relleno interno: 40px arriba/abajo, 20px a los lados */
+  display: flex;               /* Flexbox para organizar columnas del pie */
+  justify-content: space-between; /* Separa las columnas con espacio entre ellas */
+  align-items: center;         /* Centra verticalmente los elementos */
+  flex-wrap: wrap;             /* Permite que las columnas se apilen en pantallas pequeñas */
+}
+
+.footer-logo img {
+  width: 200px;                /* Imagen del logo con ancho fijo */
+  height: auto;                /* Altura proporcional */
+}
+
+.footer-text {
+  display: flex;               /* Flexbox para distribuir el texto en columnas */
+  justify-content: space-between; /* Espacio entre columnas */
+  width: 60%;                  /* Ancho total que ocupan las columnas dentro del footer */
+}
+
+.footer-column {
+  width: 48%;                  /* Cada columna ocupa casi la mitad del área disponible */
+}
+
+.footer-column h3 {
+  font-size: 25px;             /* Tamaño de fuente grande para títulos */
+  margin-bottom: 10px;         /* Espacio debajo del título */
+}
+
+.footer-column p {
+  font-size: 14px;             /* Tamaño pequeño para párrafos */
+  line-height: 1.6;            /* Altura de línea para mejorar lectura */
+}
+
+.footer-social {
+  margin-top: 10px;            /* Espacio arriba para separar íconos de otros textos */
+}
+
+.footer-social a i {
+  font-size: 35px;             /* Tamaño grande para íconos sociales */
+  color: white;                /* Color blanco por defecto */
+  margin: 0 40px;              /* Margen horizontal para separar íconos */
+  transition: color 0.3s, transform 0.3s; /* Animación suave al cambiar color y tamaño */
+}
+
+.footer-social a i:hover {
+  color: #25D366; /* Verde característico de WhatsApp al pasar mouse */
+  transform: scale(1.2); /* Escala el ícono al 120% para efecto visual */
+}
+
+/* ==================== DISEÑO RESPONSIVO ==================== */
+@media (max-width: 768px) {    /* Aplica estilos cuando el ancho de pantalla es menor o igual a 768px (tablets y móviles) */
+  .contact-bar {
+    flex-direction: column;    /* Los elementos hijos se apilan verticalmente */
+    font-size: 16px;           /* Reduce tamaño de fuente para mejor ajuste */
+    text-align: center;        /* Centra el texto */
+  }
+
+  .main-container {
+    flex-direction: column;    /* Cambia la organización de los hijos a columna para pantallas pequeñas */
+    gap: 20px;                 /* Reduce el espacio entre hijos */
+  }
+
+  .sub-logo-container {
+    align-items: center;       /* Centra los sub-logos horizontalmente */
+  }
+
+  .text-container {
+    border-radius: 15px;       /* Bordes más redondeados en todas las esquinas */
+    text-align: center;        /* Centra el texto */
+  }
+
+  .text-container h1 {
+    font-size: 24px;           /* Reduce tamaño de título para mejor visualización */
+  }
+
+  #dynamic-image {
+    max-width: 90%;            /* La imagen ocupa como máximo el 90% del ancho disponible */
+    margin-top: 20px;          /* Margen arriba para separar de otros elementos */
+  }
+
+  .experience-section {
+    flex-direction: column;    /* Apila verticalmente la sección experiencia */
+    text-align: center;        /* Centra todo el texto */
+  }
+
+  .experience-logo {
+    width: 300px;              /* Reduce tamaño del logo experiencia */
+    margin: 0 auto 20px auto;  /* Centra horizontalmente y añade margen debajo */
+  }
+
+  .footer {
+    flex-direction: column;    /* Organiza el pie de página en columna */
+    text-align: center;        /* Centra texto en el footer */
+  }
+
+  .footer-text {
+    flex-direction: column;    /* Apila columnas en vertical */
+    width: 100%;               /* Ocupa el 100% del ancho disponible */
+  }
+
+  .footer-column {
+    width: 100%;               /* Cada columna ocupa toda la anchura */
+    margin-bottom: 20px;       /* Espacio debajo de cada columna para separarlas */
+  }
+}

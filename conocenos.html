@@ -1,0 +1,258 @@
+<!DOCTYPE html> <!-- Indica que el documento es HTML5 -->
+<html lang="es"> <!-- Idioma del contenido: español -->
+
+<head> <!-- Cabecera del documento -->
+  <meta charset="UTF-8" /> <!-- Codificación de caracteres -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Adaptabilidad para móviles -->
+  <title>Transporte - DIOS PROVEERÁ</title> <!-- Título en la pestaña del navegador -->
+
+  <!-- Fuente personalizada desde Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Íconos de FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style> /* Estilos CSS internos */
+    body {
+      margin: 0; /* Elimina los márgenes por defecto */
+      font-family: 'Poppins', sans-serif; /* Fuente usada en todo el sitio */
+    }
+    /*BARRA DE CONTACTO*/
+    .top-bar {
+      background-color: #012c5f; /* Azul oscuro */
+      color: white; /* Texto blanco */
+      padding: 15px 25px; /* Espaciado interno: 15px vertical, 25px horizontal */
+      display: flex; /* Flexbox para alinear contenido */
+      justify-content: space-between; /* Elementos a extremos */
+      align-items: center; /* Centrado vertical */
+      font-weight: bold; /* Negrita */
+    }
+
+    .section-conocenos {
+      background-image: url('fondo.jpg'); /* Imagen de fondo */
+      background-size: cover; /* Cubrir todo el espacio */
+      background-position: center; /* Centrar imagen */
+      padding: 40px 30px; /* Espaciado interno */
+    }
+
+    .contenedor-tarjetas {
+      max-width: 1200px; /* Límite máximo de ancho */
+      margin: auto; /* Centrado horizontal */
+      display: flex; /* Flexbox */
+      flex-wrap: wrap; /* Permitir salto de línea */
+      justify-content: center; /* Centrado de tarjetas */
+      gap: 50px; /* Separación entre tarjetas */
+    }
+
+    .tarjeta {
+      background: white; /* Fondo blanco */
+      border-radius: 45px; /* Bordes redondeados */
+      padding: 30px; /* Espacio interno */
+      text-align: center; /* Texto centrado */
+      width: 300px; /* Ancho fijo */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    }
+
+    .icono-circular {
+      width: 80px; /* Ancho del ícono */
+      height: 80px; /* Alto del ícono */
+      border-radius: 50%; /* Forma circular */
+      margin: auto; /* Centrado */
+      margin-bottom: 20px; /* Espacio debajo */
+      display: flex; /* Flexbox */
+      align-items: center; /* Centrado vertical */
+      justify-content: center; /* Centrado horizontal */
+      color: white; /* Color del ícono */
+      font-size: 32px; /* Tamaño del ícono */
+    }
+
+    .icono-vision {
+      background-color: #FFD700; /* Color dorado */
+    }
+
+    .icono-mision {
+      background-color: #003366; /* Azul oscuro */
+    }
+
+    .icono-valores {
+      background-color: #999999; /* Gris */
+    }
+
+    h2 {
+      font-size: 22px; /* Tamaño del título */
+      font-weight: bold; /* Negrita */
+      margin-bottom: 15px; /* Espacio inferior */
+    }
+
+    p {
+      font-size: 15px; /* Tamaño del párrafo */
+      line-height: 1.6; /* Altura entre líneas */
+    }
+
+    ul {
+      list-style: none; /* Sin viñetas */
+      padding: 0; /* Sin espacio a la izquierda */
+      text-align: left; /* Alineado a la izquierda */
+      font-size: 15px; /* Tamaño del texto */
+      line-height: 1.6; /* Altura entre líneas */
+    }
+
+    ul li::before {
+      content: "✔️"; /* Check al inicio */
+      margin-right: 8px; /* Espacio entre ícono y texto */
+      color: #0a0c0f; /* Color negro */
+    }
+
+    .footer {
+      background-color: #012c5f; /* Fondo azul */
+      color: white; /* Texto blanco */
+      padding: 40px 20px; /* Espaciado interno */
+      display: flex; /* Flexbox */
+      flex-wrap: wrap; /* Ajuste de columnas */
+      justify-content: space-between; /* Separación entre columnas */
+      align-items: flex-start; /* Alineación superior */
+    }
+
+    .footer-logo img {
+      width: 200px; /* Tamaño del logo */
+      margin-bottom: 20px; /* Espacio inferior */
+    }
+
+    .footer-column {
+      flex: 1 1 300px; /* Ajustable con ancho mínimo */
+      padding: 10px 20px; /* Espaciado interno */
+    }
+
+    .footer-column h3 {
+      font-size: 20px; /* Tamaño del subtítulo */
+      margin-bottom: 10px; /* Espacio inferior */
+    }
+
+    .footer-column p {
+      font-size: 14px; /* Tamaño del texto */
+      line-height: 1.6; /* Altura entre líneas */
+    }
+
+    .footer-social {
+      margin-top: 20px; /* Espacio superior */
+    }
+
+    .footer-social a {
+      color: white; /* Color de los íconos */
+      margin-right: 20px; /* Separación entre íconos */
+      font-size: 30px; /* Tamaño de los íconos */
+      transition: color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+    }
+
+    .footer-social a:hover {
+      color: #1dd05d; /* Color al pasar el mouse */
+      transform: scale(1.2); /* Aumenta el tamaño al pasar el mouse */
+    }
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;      /* Apilar verticalmente */
+    gap: 10px;                   /* Espacio entre elementos */
+    font-size: 14px;             /* Texto más pequeño */
+    text-align: center;          /* Centrar texto */
+    padding: 15px 10px;          /* Padding reducido */
+  }
+
+  .contact-bar {
+    flex-direction: column;      /* Apilar verticalmente */
+    font-size: 16px;             /* Tamaño adecuado en móvil */
+    text-align: center;          /* Centrar texto */
+  }
+
+  .descripcion {
+    padding: 20px;               /* Espacio interno */
+  }
+
+  .footer {
+    flex-direction: column;      /* Apilar columnas en vertical */
+    text-align: center;          /* Centrar texto */
+    align-items: center;         /* Centrar elementos hijos */
+    padding: 20px 10px;          /* Padding un poco más pequeño para móvil */
+  }
+
+  .footer-logo img {
+    width: 150px;                /* Reducir tamaño logo */
+    display: block;              /* Para centrar con margin auto */
+    margin: 0 auto 20px auto;    /* Centrar horizontal, margen inferior */
+  }
+
+  .footer-column {
+    flex: none;                  /* Quitar flex-grow para evitar estiramiento */
+    width: 100%;                 /* Cada columna ocupa toda la línea */
+    margin-bottom: 15px;         /* Espacio entre columnas, pero no muy grande */
+    padding: 0 10px;             /* Padding horizontal para que no pegue a los bordes */
+  }
+
+  /* Reducir margen inferior solo en la última columna para evitar espacio extra */
+  .footer-column:last-child {
+    margin-bottom: 0;
+  }
+}
+
+  </style>
+</head>
+
+<body> <!-- Cuerpo del sitio -->
+  <div class="top-bar">
+    <span>Provincia: 924 357 477 antonfiestascinthia14@gmail.com</span>
+    <span>Cesar Pinglo 322 – Sechura</span>
+  </div>
+
+  <section class="section-conocenos">
+    <div class="contenedor-tarjetas">
+      <div class="tarjeta">
+        <div class="icono-circular icono-vision">
+          <i class="fas fa-search"></i>
+        </div>
+        <h2>VISIÓN</h2>
+        <p>Ser una empresa líder en el servicio de transporte terrestre a nivel regional y nacional, reconocida por su puntualidad, seguridad y compromiso con la satisfacción del cliente.</p>
+      </div>
+      <div class="tarjeta">
+        <div class="icono-circular icono-mision">
+          <i class="fas fa-rocket"></i>
+        </div>
+        <h2>MISIÓN</h2>
+        <p>Brindar un servicio de transporte terrestre eficiente, seguro y confortable, orientado a satisfacer las necesidades de nuestros clientes con un enfoque de mejora continua.</p>
+      </div>
+      <div class="tarjeta">
+        <div class="icono-circular icono-valores">
+          <i class="fas fa-gem"></i>
+        </div>
+        <h2>VALORES</h2>
+        <ul>
+          <li>Compromiso</li>
+          <li>Confiabilidad</li>
+          <li>Atención al cliente</li>
+          <li>Eficiencia</li>
+          <li>Trabajo en equipo</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-logo">
+      <img src="logo.png" alt="Logo Empresa">
+    </div>
+    <div class="footer-column">
+      <h3>Sobre Nosotros</h3>
+      <p>Brindamos soluciones especializadas en transporte terrestre, adaptadas a las necesidades de nuestros clientes y respaldadas por una flota moderna y personal capacitado.</p>
+    </div>
+    <div class="footer-column">
+      <h3>Contáctanos</h3>
+      <p><strong>Teléfono:</strong> 924 357 477</p>
+      <p><strong>Email:</strong> antonfiestascinthia14@gmail.com</p>
+      <p><strong>Dirección:</strong> Cesar Pinglo 322 – Sechura</p>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/diosempresa" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://wa.me/+51924357477" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

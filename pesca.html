@@ -1,0 +1,222 @@
+<!DOCTYPE html> <!-- Define el tipo de documento como HTML5 -->
+<html lang="es"> <!-- Inicia el documento HTML y especifica que el idioma es español -->
+<head>
+  <meta charset="UTF-8" /> <!-- Define la codificación de caracteres como UTF-8 para soportar caracteres especiales -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- Configura la ventana gráfica para que sea responsiva en dispositivos móviles -->
+  <title>Pesca - DIOS PROVEERÁ</title> <!-- Título de la pestaña del navegador -->
+
+  <!-- Fuente moderna -->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&display=swap" rel="stylesheet"> <!-- Importa la fuente "Raleway" con pesos 400, 600 y 800 desde Google Fonts -->
+
+  <!-- Íconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/> <!-- Importa la librería de íconos Font Awesome versión 6.5.0 -->
+
+  <!-- Estilo personalizado -->
+  <style>
+/* Aplica estilos globales a todos los elementos */
+* {
+  margin: 0; /* Elimina el margen predeterminado */
+  padding: 0; /* Elimina el padding predeterminado */
+  box-sizing: border-box; /* Incluye el padding y borde en el cálculo del ancho y alto */
+  font-family: 'Raleway', sans-serif; /* Aplica la fuente Raleway por defecto */
+}
+
+/* Estilos para el cuerpo del documento */
+body {
+  background-color: #f5f8fc; /* Color de fondo azul muy claro */
+  color: #333; /* Color de texto gris oscuro */
+}
+
+/* Barra de contacto */
+.contact-bar {
+  background-color: #012c5f; /* Fondo azul oscuro */
+  color: white; /* Texto blanco */
+  padding: 15px 25px; /* Espaciado interno arriba/abajo 15px, izquierda/derecha 25px */
+  display: flex; /* Usa Flexbox para distribución */
+  justify-content: space-between; /* Separa elementos al máximo horizontalmente */
+  align-items: center; /* Centra verticalmente los elementos */
+  font-size: 18px; /* Tamaño de fuente 18 píxeles */
+  font-weight: 600; /* Grosor de fuente seminegrita */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea si no caben */
+  gap: 10px; /* Espacio entre elementos de 10px */
+  text-align: center; /* Texto centrado dentro de los elementos */
+}
+
+/* Banner principal */
+.banner {
+  background: linear-gradient(135deg, hsl(175, 100%, 60%), #004c99); /* Degradado diagonal de verde azulado a azul oscuro */
+  color: white; /* Texto blanco */
+  padding: 60px 30px; /* Espaciado interno: 60px arriba/abajo, 30px izquierda/derecha */
+  text-align: center; /* Texto centrado */
+}
+
+.banner h1 {
+  font-size: 28px; /* Tamaño de letra grande para el título */
+  font-weight: 800; /* Muy negrita */
+  margin-bottom: 35px; /* Margen inferior para separar del siguiente elemento */
+  line-height: 1.3; /* Altura de línea compacta para un texto más apretado */
+}
+
+.banner img {
+  width: 400px; /* Ancho fijo de 400 píxeles */
+  max-width: 100%; /* El ancho máximo nunca excederá el 100% del contenedor */
+  height: auto; /* La altura se ajusta automáticamente para mantener proporción */
+  border-radius: 40px; /* Bordes redondeados muy pronunciados */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra debajo de la imagen para dar profundidad */
+  transition: transform 0.3s ease; /* Animación suave para transformaciones */
+}
+
+.banner img:hover {
+  transform: scale(1.03); /* Al pasar el cursor, la imagen se agranda ligeramente (3%) */
+}
+
+/* Descripción */
+.descripcion {
+  padding: 40px 60px; /* Espaciado interno: 40px arriba/abajo, 60px izquierda/derecha */
+  font-size: 20px; /* Tamaño de fuente ligeramente grande para mejor legibilidad */
+  line-height: 1.8; /* Altura de línea para facilitar lectura */
+  background-color: #b9bfc596; /* Fondo semitransparente gris claro */
+  max-width: 900px; /* Ancho máximo del bloque */
+  margin: 40px auto; /* Margen superior e inferior de 40px, centrado horizontalmente */
+  border-radius: 10px; /* Bordes ligeramente redondeados */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Sombra muy ligera para dar relieve */
+  text-align: justify; /* <-- Esto justifica el texto */
+}
+
+/* Pie de página */
+.footer {
+  background-color: #012c5f; /* Fondo azul oscuro */
+  color: white; /* Texto blanco */
+  padding: 40px 20px; /* Espaciado interno 40px arriba/abajo y 20px izquierda/derecha */
+  display: flex; /* Usa Flexbox para layout */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+  justify-content: space-between; /* Espacia los elementos a lo largo del eje horizontal */
+  align-items: flex-start; /* Alinea elementos al inicio verticalmente */
+  /* Diferente: se añadió para separar columnas y controlar alineación */
+}
+
+.footer-logo img {
+  width: 200px; /* Ancho fijo para el logo */
+  margin-bottom: 20px; /* Espacio debajo del logo */
+}
+
+.footer-column {
+  flex: 1 1 300px; /* Flex-grow 1, flex-shrink 1, base de 300px para columnas */
+  padding: 10px 20px; /* Espaciado interno */
+}
+
+.footer-column h3 {
+  font-size: 20px; /* Tamaño de los títulos de columna */
+  margin-bottom: 10px; /* Separación debajo del título */
+}
+
+.footer-column p {
+  font-size: 18px; /* Tamaño del texto */
+  line-height: 1.6; /* Altura de línea para legibilidad */
+}
+
+/* Redes sociales */
+.footer-social {
+  margin-top: 20px; /* Margen superior para separar de otros elementos */
+}
+
+.footer-social a {
+  color: white; /* Color de los íconos */
+  margin-right: 20px; /* Espacio entre los íconos */
+  font-size: 30px; /* Tamaño grande para íconos */
+  transition: color 0.3s ease, transform 0.3s ease; /* Transición suave para color y escala */
+}
+
+.footer-social a:hover {
+  color: #1dd05d; /* Cambia a verde WhatsApp al pasar el cursor */
+  transform: scale(1.2); /* Agranda el icono un 20% al pasar el cursor */
+}
+
+/* Responsive: ajustes para móviles y tablets */
+@media (max-width: 768px) {
+  .contact-bar {
+    flex-direction: column; /* Cambia a columna para apilar elementos verticalmente */
+    gap: 16px;/*10*/ /* Espacio aumentado entre elementos */
+    text-align: center; /* Texto centrado */
+  }
+
+  .banner {
+    padding: 40px 20px; /* Reduce padding para pantallas pequeñas */
+  }
+
+  .banner h1 {
+    font-size: 22px; /* Reduce tamaño de texto en móviles */
+  }
+
+  .descripcion {
+    padding: 20px; /* Reduce padding para pantallas pequeñas */
+    font-size: 18px; /* Reduce tamaño de texto para mejor ajuste */
+    max-width: 100%; /* Permite que ocupe todo el ancho disponible */
+    margin: 20px 10px; /* Margen reducido */
+    text-align: justify; /* <-- Esto justifica el texto */
+  }
+
+  .footer {
+    flex-direction: column; /* Apila las columnas en vertical */
+    text-align: center; /* Centra texto en el pie */
+  }
+
+  .footer-column {
+    margin-bottom: 20px; /* Espacio inferior entre columnas */
+  }
+   /* CENTRAR LOGO EN MÓVIL */
+  .footer-logo {
+    margin: 0 auto 20px auto; /* Centra el logo horizontalmente y añade margen abajo */
+  }
+}
+
+  </style>
+</head>
+
+<body>
+  <!-- Barra de contacto -->
+  <div class="contact-bar">
+    <div>Provincia: 924 357 477 antonfiestascinthia14@gmail.com</div> <!-- Datos de contacto: teléfono y email -->
+    <div>Cesar Pinglo 322 – Sechura</div> <!-- Dirección física -->
+  </div>
+
+  <!-- Banner principal -->
+  <section class="banner">
+    <h1>DISTRIBUIDOR RESPONSABLE DE LAS MULTIPLES ACTIVIDADES DE LA PESCA PARA CHD Y CHI</h1> <!-- Título destacado del banner -->
+    <img src="PESCA.png" alt="Pesca" /> <!-- Imagen ilustrativa con texto alternativo -->
+  </section>
+
+  <!-- Descripción -->
+  <section class="descripcion">
+    <p>
+      En <strong>DIOS PROVEERÁ</strong>, nos dedicamos con responsabilidad a la distribución de productos y servicios para el sector pesquero. Brindamos soporte a embarcaciones pesqueras CHD y CHI con una red eficiente y comprometida.
+    </p>
+    <p>
+      Nuestra misión es garantizar calidad, rapidez y compromiso en cada una de las operaciones relacionadas con la pesca industrial y artesanal.
+    </p>
+  </section>
+
+  <!-- Pie de página -->
+  <footer class="footer">
+    <div class="footer-logo">
+      <img src="logo.png" alt="Logo Empresa"> <!-- Logo de la empresa -->
+    </div>
+
+    <div class="footer-column">
+      <h3>Sobre Nosotros</h3> <!-- Título sección sobre la empresa -->
+      <p>Brindamos soluciones especializadas para la industria pesquera; ofreciendo servicio de almacenamiento en frío, transporte y distribución de combustibles para embarcaciones y comercialización de productos de mar.</p> <!-- Descripción breve -->
+    </div>
+
+    <div class="footer-column">
+      <h3>Contáctanos</h3> <!-- Título sección de contacto -->
+      <p><strong>Teléfono:</strong> 924 357 477</p> <!-- Teléfono destacado -->
+      <p><strong>Email:</strong> antonfiestascinthia14@gmail.com</p> <!-- Email destacado -->
+      <p><strong>Dirección:</strong> Cesar Pinglo 322 – Sechura</p> <!-- Dirección destacada -->
+      <div class="footer-social">
+        <a href="https://www.facebook.com/diosempresa" target="_blank"><i class="fab fa-facebook"></i></a> <!-- Icono y enlace a Facebook -->
+        <a href="https://wa.me/+51924357477" target="_blank"><i class="fab fa-whatsapp"></i></a> <!-- Icono y enlace a WhatsApp -->
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

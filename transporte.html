@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<!-- Define que este documento es HTML5 -->
+<html lang="es">
+<!-- El idioma principal del documento es español -->
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- Codificación de caracteres para soportar letras con acentos y símbolos -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- Hace que la página sea responsiva en móviles y tablets ajustando el ancho al dispositivo -->
+
+  <title>Transporte - DIOS PROVEERÁ</title>
+  <!-- Título que aparece en la pestaña del navegador -->
+
+  <!-- Fuente moderna desde Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&display=swap" rel="stylesheet">
+  <!-- Importa la fuente Raleway en pesos 400 (normal), 600 (semibold), 800 (bold) -->
+
+  <!-- Íconos desde Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <!-- Permite usar íconos como el bus o WhatsApp en la página -->
+
+  <!-- Estilo CSS personalizado dentro del documento -->
+  <style>
+    /* Reseteo global de márgenes y padding para evitar inconsistencias */
+    * {
+      margin: 0; /* Elimina margen por defecto de todos los elementos */
+      padding: 0; /* Elimina relleno por defecto */
+      box-sizing: border-box; /* Incluye padding y borde en el ancho y alto */
+      font-family: 'Raleway', sans-serif; /* Fuente moderna para toda la página */
+    }
+
+    body {
+      background-color: #f5f8fc; /* Color de fondo muy claro, casi blanco azulado */
+      color: #333; /* Color de texto gris oscuro para buena legibilidad */
+    }
+
+    /* Barra superior de contacto */
+    .contact-bar {
+      background-color: #012c5f; /* Azul oscuro intenso */
+      color: white; /* Texto en blanco para contraste */
+      padding: 15px 25px; /* Espaciado interno vertical 15px, horizontal 25px */
+      display: flex; /* Contenedor flexible para alinear contenido */
+      justify-content: space-between; /* Espacio máximo entre los dos bloques */
+      align-items: center; /* Centra verticalmente el contenido */
+      font-size: 18px; /* Tamaño de letra grande para buena visibilidad */
+      font-weight: 600; /* Peso seminegrita */
+      flex-wrap: wrap; /* Permite que los elementos se ajusten a la línea siguiente si no caben */
+      gap: 10px; /* Espacio entre elementos en flexbox */
+      text-align: center; /* Centra texto dentro de los elementos hijos */
+    }
+
+    /* Sección del banner principal */
+    .banner {
+      background: linear-gradient(135deg, hsl(175, 100%, 60%), #004c99);
+      /* Degradado diagonal de un azul verdoso claro a azul oscuro */
+      color: white; /* Texto blanco */
+      padding: 60px 30px; /* Espacio interno grande para hacer un área visible */
+      text-align: center; /* Texto centrado */
+    }
+
+    /* Estilo para el encabezado dentro del banner */
+    .banner h1 {
+      font-size: 28px; /* Tamaño de texto grande */
+      font-weight: 800; /* Muy negrita */
+      margin-bottom: 35px; /* Margen inferior para separar del siguiente elemento */
+      line-height: 1.3; /* Altura de línea ajustada para evitar mucho espacio entre líneas */
+    }
+
+    /* Imagen dentro del banner */
+    .banner img {
+      width: 500px; /* Ancho fijo preferido */
+      max-width: 100%; /* Para que no se pase del ancho del contenedor en pantallas pequeñas */
+      height: auto; /* Mantiene proporción original de la imagen */
+      border-radius: 40px; /* Bordes redondeados grandes */
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra suave debajo */
+      transition: transform 0.3s ease; /* Transición suave para animaciones de transform */
+    }
+
+    /* Efecto al pasar el cursor sobre la imagen */
+    .banner img:hover {
+      transform: scale(1.03); /* Aumenta la imagen un 3% al hacer hover */
+    }
+
+    /* Sección de descripción */
+    .descripcion {
+      padding: 40px 60px; /* Espacio interior amplio para legibilidad */
+      font-size: 20px; /* Tamaño de texto cómodo para leer */
+      line-height: 1.8; /* Altura de línea amplia para mejor lectura */
+      background-color: #b9bfc596; /* Fondo semitransparente gris claro */
+      max-width: 900px; /* Ancho máximo para evitar líneas muy largas */
+      margin: 40px auto; /* Margen arriba y abajo, centrado horizontalmente */
+      border-radius: 10px; /* Bordes redondeados */
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Sombra muy ligera */
+      text-align: justify; /* <-- Esto justifica el texto */
+    }
+
+    /* Pie de página */
+    .footer {
+      background-color: #012c5f; /* Azul oscuro */
+      color: white; /* Texto blanco */
+      padding: 40px 20px; /* Espaciado amplio arriba y abajo, más reducido lateral */
+      display: flex; /* Flexbox para distribuir columnas */
+      flex-wrap: wrap; /* Permite que las columnas bajen en pantallas pequeñas */
+      justify-content: space-between; /* Espacio entre columnas */
+      align-items: flex-start; /* Alineación superior */
+    }
+
+    /* Imagen del logo en el footer */
+    .footer-logo img {
+      width: 200px; /* Ancho fijo del logo */
+      margin-bottom: 20px; /* Espacio debajo */
+    }
+
+    /* Columnas del footer */
+    .footer-column {
+      flex: 1 1 300px; /* Flex-grow:1, flex-shrink:1, base 300px para tamaño flexible */
+      padding: 10px 20px; /* Espacio interno */
+    }
+
+    /* Título dentro de columnas */
+    .footer-column h3 {
+      font-size: 20px; /* Tamaño legible */
+      margin-bottom: 10px; /* Separación inferior */
+    }
+
+    /* Párrafos dentro de columnas */
+    .footer-column p {
+      font-size: 18px; /* Tamaño de texto cómodo */
+      line-height: 1.6; /* Altura de línea para lectura */
+    }
+
+    /* Sección de redes sociales en footer */
+    .footer-social {
+      margin-top: 20px; /* Separación superior */
+    }
+
+    /* Enlaces de redes sociales */
+    .footer-social a {
+      color: white; /* Iconos en blanco */
+      margin-right: 20px; /* Separación entre íconos */
+      font-size: 30px; /* Tamaño grande para visibilidad */
+      transition: color 0.3s ease, transform 0.3s ease; /* Transición suave para color y tamaño */
+    }
+
+    /* Al pasar el mouse sobre los íconos sociales */
+    .footer-social a:hover {
+      color: #1dd05d; /* Color verde (como WhatsApp) */
+      transform: scale(1.2); /* Aumenta el tamaño al 120% */
+    }
+
+    /* Ícono flotante en esquina inferior derecha */
+    .floating-icon {
+      position: fixed; /* Fijo en pantalla aunque se haga scroll */
+      bottom: 20px; /* Separado 20px del borde inferior */
+      right: 20px; /* Separado 20px del borde derecho */
+      background-color: #004c99; /* Azul medio */
+      color: white; /* Ícono blanco */
+      width: 60px; /* Ancho fijo */
+      height: 60px; /* Alto fijo para hacer círculo */
+      border-radius: 50%; /* Forma circular */
+      display: flex; /* Para centrar contenido */
+      justify-content: center; /* Centra horizontalmente */
+      align-items: center; /* Centra verticalmente */
+      font-size: 28px; /* Tamaño del ícono */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Sombra definida */
+      transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+      z-index: 1000; /* Por encima de otros elementos */
+    }
+
+    /* Efecto hover del ícono flotante */
+    .floating-icon:hover {
+      background-color: #1dd05d; /* Cambia a verde */
+      transform: scale(1.1); /* Agranda el ícono 10% */
+    }
+
+    /* Estilos responsivos para pantallas menores a 768px */
+    @media (max-width: 768px) {
+      .contact-bar {
+        flex-direction: column; /* Cambia la barra a columnas */
+        gap: 16px; /* Más espacio entre elementos */
+        text-align: center; /* Centra texto */
+      }
+
+      .banner {
+        padding: 40px 20px; /* Reduce padding en móviles */
+      }
+
+      .banner h1 {
+        font-size: 22px; /* Texto más pequeño para pantallas pequeñas */
+      }
+
+      .descripcion {
+        padding: 20px; /* Menos padding */
+        font-size: 18px; /* Texto un poco más pequeño */
+        max-width: 100%; /* Ocupa todo el ancho */
+        margin: 20px 10px; /* Margen reducido */
+        text-align: justify; /* <-- Esto justifica el texto */
+      }
+
+      .footer {
+        flex-direction: column; /* Columnas apiladas */
+        text-align: center; /* Centra texto */
+      }
+
+      .footer-column {
+        margin-bottom: 20px; /* Separación vertical entre columnas */
+      }
+
+      .footer-logo {
+        margin: 0 auto 20px auto; /* Centra logo horizontalmente con margen abajo */
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Barra superior con teléfono, correo y dirección -->
+  <div class="contact-bar">
+    <div>Provincia: 924 357 477 antonfiestascinthia14@gmail.com</div>
+    <div>Cesar Pinglo 322 – Sechura</div>
+  </div>
+
+  <!-- Banner principal con título e imagen -->
+  <section class="banner">
+    <h1>CONVENIO CON LA EMPRESA TERRAMOVIL PARA UN VIAJE PLACENTERO Y SEGURO</h1>
+    <img src="TRANSPORTE.png" alt="Transporte" />
+  </section>
+
+  <!-- Texto descriptivo de servicios -->
+  <section class="descripcion">
+    <p>
+      En <strong>DIOS PROVEERÁ</strong>, nos enorgullece ofrecerte una experiencia de viaje única y cómoda, asociándonos con Terramovil para brindarte las mejores opciones de transporte. Además, contamos con una flota de modernos buses disponibles para alquilar, ideales para viajes de turismo, excursiones o cualquier otra necesidad que tengas. 
+    </p>
+    <p>
+      Ya sea que busques explorar nuevos destinos o simplemente transportar a tu grupo con comodidad y seguridad, estamos aquí para hacer de tu viaje una experiencia inolvidable. ¡Viaja con nosotros y disfruta de cada kilómetro con tranquilidad y confort!
+    </p>
+  </section>
+
+  <!-- Ícono flotante en esquina inferior derecha que enlaza a Terramovil -->
+  <a href="https://www.terramovilperu.com.pe/" target="_blank" class="floating-icon" title="Ir a Terramovil">
+    <i class="fas fa-bus"></i>
+  </a>
+
+  <!-- Pie de página con logo, info sobre la empresa y contacto -->
+  <footer class="footer">
+    <div class="footer-logo">
+      <img src="logo.png" alt="Logo Empresa">
+    </div>
+
+    <div class="footer-column">
+      <h3>Sobre Nosotros</h3>
+      <p>Brindamos soluciones especializadas para la industria pesquera; ofreciendo servicio de almacenamiento en frío, transporte y distribución de combustibles para embarcaciones y comercialización de productos de mar.</p>
+    </div>
+
+    <div class="footer-column">
+      <h3>Contáctanos</h3>
+      <p><strong>Teléfono:</strong> 924 357 477</p>
+      <p><strong>Email:</strong> antonfiestascinthia14@gmail.com</p>
+      <p><strong>Dirección:</strong> Cesar Pinglo 322 – Sechura</p>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/diosempresa" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://wa.me/+51924357477" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html> <!-- Define el tipo de documento como HTML5 -->
+<html lang="es"> <!-- Etiqueta raíz del documento, idioma español -->
+<head>
+  <meta charset="UTF-8" /> <!-- Define la codificación de caracteres como UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- Configura la ventana gráfica para dispositivos móviles -->
+  <title>Camaras - DIOS PROVEERÁ</title> <!-- Título que aparece en la pestaña del navegador -->
+
+  <!-- Fuente moderna -->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&family=Merriweather:wght@400;700&display=swap" rel="stylesheet"> 
+  <!-- Importa las fuentes 'Raleway' y 'Merriweather' desde Google Fonts -->
+
+  <!-- Íconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <!-- Importa la librería Font Awesome para usar iconos -->
+
+  <!-- Estilo personalizado -->
+  <style>
+   * {
+  margin: 0; /* Elimina el margen por defecto de todos los elementos */
+  padding: 0; /* Elimina el relleno por defecto de todos los elementos */
+  box-sizing: border-box; /* Hace que el padding y borde se incluyan dentro del ancho y alto */
+  font-family: 'Raleway', sans-serif; /* Fuente principal para todo el documento */
+}
+
+body {
+  background-color: #f5f8fc; /* Color de fondo muy claro para la página */
+  color: #333; /* Color de texto gris oscuro para buena legibilidad */
+}
+
+/* Barra de contacto */
+.contact-bar {
+  background-color: #012c5f; /* Fondo azul oscuro */
+  color: white; /* Texto blanco para contraste */
+  padding: 15px 25px; /* Espaciado interno arriba/abajo y derecha/izquierda */
+  display: flex; /* Usa flexbox para layout */
+  justify-content: space-between; /* Separar elementos a extremos */
+  align-items: center; /* Centrar verticalmente */
+  font-size: 18px; /* Tamaño de letra legible */
+  font-weight: 600; /* Fuente semi-negrita */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en varias líneas si no caben */
+  gap: 10px; /* Espacio entre elementos flex */
+  text-align: center; /* Centra texto dentro de cada item (útil si se envuelven) */
+}
+
+/* Banner principal */
+.banner {
+  background: linear-gradient(135deg, hsl(175, 100%, 60%), #004c99); /* Degradado diagonal de verde agua a azul */
+  color: white; /* Texto blanco para contraste */
+  padding: 40px 30px; /* Espacio interno generoso arriba/abajo y lados */
+  text-align: center; /* Centra el texto */
+}
+
+.banner h1 {
+  font-size: 28px; /* Tamaño de letra grande para el título */
+  font-weight: 600; /* Semi-negrita para resaltar */
+  margin-bottom: 15px; /* Espacio debajo del título */
+}
+
+.banner img {
+  width: 400px; /* Ancho fijo de la imagen */
+  max-width: 100%; /* No sobrepasa el ancho del contenedor (responsivo) */
+  height: auto; /* Altura automática para mantener proporción */
+  border-radius: 20px; /* Bordes redondeados */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra suave debajo para dar profundidad */
+}
+
+/* Descripción con tarjetas horizontales */
+.descripcion {
+  max-width: 1100px; /* Ancho máximo del contenedor */
+  margin: 40px auto; /* Margen arriba/abajo y centrado horizontal */
+  display: flex; /* Flexbox para layout en fila */
+  flex-wrap: wrap; /* Permite que los items se envuelvan a la siguiente línea */
+  gap: 25px; /* Separación entre las tarjetas */
+  padding: 0 20px; /* Espaciado interno horizontal */
+  justify-content: center; /* Centra las tarjetas horizontalmente */
+}
+
+.descripcion p {
+  background-color: #b9bfc596; /* Fondo semitransparente gris claro */
+  padding: 25px 30px; /* Relleno interno amplio para comodidad */
+  font-size: 18px; /* Tamaño de letra legible */
+  line-height: 1.8; /* Altura de línea para mejor lectura */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra ligera para destacar tarjetas */
+  transition: box-shadow 0.3s ease; /* Transición suave para efecto hover */
+  flex: 1 1 300px; /* Flex-grow y shrink con base de 300px para adaptabilidad */
+  font-family: 'Merriweather', serif; /* Fuente serif para texto descriptivo */
+  text-align: justify; /* <-- ESTO es lo que necesitas agregar */
+}
+
+.descripcion p:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra más marcada al pasar el cursor */
+}
+
+/* Pie de página */
+.footer {
+  background-color: #012c5f; /* Mismo azul oscuro que la barra de contacto */
+  color: white; /* Texto blanco */
+  padding: 40px 20px; /* Espaciado interno */
+  display: flex; /* Flexbox para distribuir columnas */
+  flex-wrap: wrap; /* Permite que columnas se envuelvan en pantallas pequeñas */
+  justify-content: space-between; /* Espacio entre columnas */
+  align-items: flex-start; /* Alinea al inicio verticalmente */
+  gap: 30px; /* Espacio entre columnas */
+}
+
+.footer-logo img {
+  width: 200px; /* Ancho fijo para el logo */
+  margin-bottom: 20px; /* Espacio debajo del logo */
+}
+
+.footer-column {
+  flex: 1 1 300px; /* Cada columna puede crecer o encoger con base mínima de 300px */
+  padding: 10px 20px; /* Espaciado interno */
+}
+
+.footer-column h3 {
+  font-size: 20px; /* Tamaño del título de la columna */
+  margin-bottom: 10px; /* Espacio debajo del título */
+}
+
+.footer-column p {
+  font-size: 18px; /* Tamaño de texto para párrafos */
+  line-height: 1.6; /* Altura de línea cómoda para lectura */
+}
+
+/* Redes sociales */
+.footer-social {
+  margin-top: 20px; /* Espacio arriba para separar de otros elementos */
+}
+
+.footer-social a {
+  color: white; /* Color blanco para iconos */
+  margin-right: 20px; /* Espacio a la derecha para separar iconos */
+  font-size: 30px; /* Tamaño grande para iconos */
+  transition: color 0.3s ease, transform 0.3s ease; /* Transiciones para cambio de color y escala */
+}
+
+.footer-social a:hover {
+  color: #1dd05d; /* Color verde al pasar el cursor */
+  transform: scale(1.2); /* Aumenta tamaño al hacer hover */
+}
+
+/* MEDIA QUERIES - para pantallas menores a 768px (móviles y tablets) */
+@media (max-width: 768px) {
+  .contact-bar {
+    flex-direction: column; /* Apila elementos verticalmente */
+    font-size: 16px; /* Reduce tamaño de fuente */
+    padding: 15px; /* Reduce padding */
+  }
+
+  .banner h1 {
+    font-size: 22px; /* Reduce tamaño del título */
+  }
+  .tarjetas-container {
+       flex-direction: column;    /* Apila las tarjetas verticalmente */
+       gap: 20px;                 /* Espacio entre tarjetas */
+     }
+
+     .tarjetas-container p {
+       width: 100%;               /* Cada tarjeta ocupa todo el ancho del contenedor */
+       font-size: 15px;           /* Texto más pequeño para pantallas pequeñas */
+       padding: 18px;             /* Menor relleno interno */
+       word-break: break-word;
+      hyphens: auto;
+      text-align: justify;
+      flex: unset; /*para eliminar espacios en cada cajon*/
+     }
+
+  .descripcion {
+    flex-direction: column; /* Apila las tarjetas verticalmente */
+    padding: 0 15px; /* Reduce padding lateral */
+  }
+
+  .descripcion p {
+    width: 100%; /* Tarjetas ocupan todo el ancho */
+    font-size: 17px; /* Tamaño de texto un poco más pequeño */
+    padding: 20px; /* Padding ajustado */
+    text-align: justify; /* <-- ESTO es lo que necesitas agregar */
+  }
+
+  .footer {
+    flex-direction: column; /* Apila columnas del footer verticalmente */
+    text-align: center; /* Centra texto */
+    align-items: center; /* Centra elementos */
+  }
+
+  .footer-column {
+    margin-bottom: -60px; /* Margen negativo para ajustar espacio entre columnas */
+    padding: 0; /* Elimina padding */
+  }
+
+  .footer-social a {
+    margin: 0 10px; /* Reduce margen entre iconos sociales */
+  }
+}
+
+  </style>
+</head>
+
+<body>
+  <!-- Barra de contacto -->
+  <div class="contact-bar">
+    <div>Provincia: 924 357 477 antonfiestascinthia14@gmail.com</div> <!-- Información de contacto y correo -->
+    <div>Cesar Pinglo 322 – Sechura</div> <!-- Dirección física -->
+  </div>
+
+  <!-- Banner principal -->
+  <section class="banner">
+    <h1>ALQUILER DE CÁMARAS FRIGORÍFICAS</h1> <!-- Título principal -->
+    <img src="CAMARA.png" alt="Camaras" /> <!-- Imagen representativa -->
+  </section>
+
+  <!-- Descripción con tarjetas -->
+  <section class="descripcion">
+    <p>
+      En <strong>DIOS PROVEERÁ</strong>, nos adaptamos a tus necesidades con responsabilidad y compromiso. Contamos con cámaras frigoríficas en alquiler, ideales para conservar tus productos en las mejores condiciones durante todo el proceso.
+    <p> <!-- Aquí falta cerrar el párrafo anterior correctamente, se abre otro párrafo -->
+      Además, brindamos el servicio de transporte especializado de pesca, asegurando que tu carga llegue fresca, segura y a tiempo, ya sea desde el puerto o directamente desde tu punto de faena.
+    </p>
+    <p>
+      Y para que no te falte nada, también te ofrecemos hielo en venta, perfecto para embarcaciones y operaciones de conservación en alta mar o en tierra.
+      Conserva mejor, transporta seguro y mantén la calidad de tu producto con nosotros.
+    </p>
+  </section>
+
+  <!-- Pie de página -->
+  <footer class="footer">
+    <div class="footer-logo">
+      <img src="logo.png" alt="Logo Empresa"> <!-- Logo de la empresa -->
+    </div>
+
+    <div class="footer-column">
+      <h3>Sobre Nosotros</h3> <!-- Título columna -->
+      <p>Brindamos soluciones especializadas para la industria pesquera; ofreciendo servicio de almacenamiento en frío, transporte y distribución de combustibles para embarcaciones y comercialización de productos de mar.</p>
+    </div>
+
+    <div class="footer-column">
+      <h3>Contáctanos</h3> <!-- Título columna -->
+      <p><strong>Teléfono:</strong> 924 357 477</p> <!-- Teléfono -->
+      <p><strong>Email:</strong> antonfiestascinthia14@gmail.com</p> <!-- Email -->
+      <p><strong>Dirección:</strong> Cesar Pinglo 322 – Sechura</p> <!-- Dirección -->
+      <div class="footer-social">
+        <a href="https://www.facebook.com/diosempresa" target="_blank"><i class="fab fa-facebook"></i></a> <!-- Icono Facebook con enlace -->
+        <a href="https://wa.me/+51924357477" target="_blank"><i class="fab fa-whatsapp"></i></a> <!-- Icono WhatsApp con enlace -->
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
